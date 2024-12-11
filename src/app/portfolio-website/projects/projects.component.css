@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Section Heading */
+section.portfolio {
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #1f4068, #1b1b2f); /* Gradient for better depth */
+    color: white;
+    text-align: center;
+}
+
+section.portfolio .heading {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+section.portfolio .heading span {
+    color: #ff6b6b; /* Accent color for highlight */
+    font-style: italic;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio Box */
+.portfolio-box {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portfolio-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #ff6b6b;
+}
+
+/* Specific Style for First Project Image */
+.portfolio-box.small-image img {
+    height: 300px; /* Reduced height for smaller appearance */
+    object-fit: contain; /* Ensures the image retains aspect ratio */
+}
+
+/* Portfolio Layer */
+.portfolio-layer {
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f9;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-layer p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.portfolio-layer p:last-child {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: normal;
+}
+
+.portfolio-layer a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #1f4068;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.portfolio-layer a:hover {
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section.portfolio .heading {
+        font-size: 2rem;
+    }
+
+    .portfolio-container {
+        gap: 20px;
+    }
+
+    .portfolio-layer a {
+        font-size: 1.2rem;
+    }
+}

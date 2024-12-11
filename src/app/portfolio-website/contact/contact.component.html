@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="input-box">
+        <input
+          type="text"
+          placeholder="Full Name"
+          formControlName="fullName"
+          required
+        />
+        <div
+          *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched"
+          class="error"
+        >
+          Full Name is required.
+        </div>
+
+        <input
+          type="email"
+          placeholder="Email Address"
+          formControlName="email"
+          required
+        />
+        <div
+          *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+          class="error"
+        >
+          Please enter a valid email address.
+        </div>
+      </div>
+
+      <div class="input-box">
+        <input
+          type="text"
+          placeholder="Mobile Number"
+          formControlName="mobileNumber"
+          required
+        />
+        <div
+          *ngIf="contactForm.get('mobileNumber')?.invalid && contactForm.get('mobileNumber')?.touched"
+          class="error"
+        >
+          Please enter a valid mobile number (digits only).
+        </div>
+
+        <input
+          type="text"
+          placeholder="Email Subject"
+          formControlName="subject"
+          required
+        />
+        <div
+          *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
+          class="error"
+        >
+          Subject is required.
+        </div>
+      </div>
+
+      <textarea
+        formControlName="message"
+        cols="30"
+        rows="10"
+        placeholder="Your Message"
+        required
+      ></textarea>
+      <div
+        *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+        class="error"
+      >
+        Message is required.
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+</div>
+
+<app-footer></app-footer>

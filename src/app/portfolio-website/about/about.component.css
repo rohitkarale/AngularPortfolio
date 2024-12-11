@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #f8f9fa; /* Light font color for dark background */
+    background: linear-gradient(145deg, #1f3a51, #142f45); /* Dark gradient background */
+}
+
+.container {
+    background: linear-gradient(120deg, #2c3e50, #4ca1af);
+    max-width: 100%;
+    padding: 20px 80px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 30px;
+    background: linear-gradient(145deg, #1f3a51, #142f45);
+    border-radius: 20px;
+    margin: 40px auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Prevents overflow when scaling */
+}
+
+.about:hover {
+    transform: scale(1.05); /* Slightly enlarges the container */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.about-img {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img img {
+    max-width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #3f51b5; /* Matches the header's dark blue */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.2); /* Enlarges the image on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-content {
+    flex: 2;
+    margin: 20px;
+    padding: 20px;
+    color: #f8f9fa; /* Light font color to ensure visibility on dark background */
+    transition: transform 0.3s ease;
+}
+
+.about-content .heading {
+    font-size: 2.8rem;
+    color: #ffeb3b; /* Yellow to stand out against dark background */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Adds depth to the heading */
+}
+
+.about-content .heading span {
+    color: #fbc02d; /* Matches the yellow from the logo or header */
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    color: #ff5f6d; /* Light red for contrast against dark background */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* Light gray for better readability */
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Button Styling */
+.about-content .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #3f51b5; /* Matches header */
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.about-content .btn:hover {
+    background: #fbc02d; /* Matches yellow from the header */
+    color: #333;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated Background */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(120deg, #1f3a51, #142f45);
+    }
+    50% {
+        background: linear-gradient(120deg, #4ca1af, #2c3e50);
+    }
+    100% {
+        background: linear-gradient(120deg, #1f3a51, #142f45);
+    }
+}
+
+.container {
+    animation: backgroundAnimation 5s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-img img {
+        max-width: 200px;
+        height: 200px;
+    }
+
+    .about-content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about-content .heading {
+        font-size: 2.2rem;
+    }
+
+    .about-content p {
+        font-size: 1.1rem;
+    }
+
+    .about-content .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* About Text Visibility */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}

@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(145deg, #1f3a51, #142f45);
+}
+
+.container {
+    background: linear-gradient(120deg, #2c3e50, #4ca1af);
+    max-width: 100%;
+    padding: 20px 80px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #fbc02d; /* Yellow color for contrast */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact h2 span {
+    color: #3f51b5; /* Blue color for accent */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.error{
+    color: red;
+}
+
+.input-box input, .input-box textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #3f51b5;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box input:focus, .input-box textarea:focus {
+    border-color: #fbc02d;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.5);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3f51b5; /* Blue button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    align-self: center;
+}
+
+.btn:hover {
+    background-color: #fbc02d; /* Yellow hover effect */
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box input, .input-box textarea {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
