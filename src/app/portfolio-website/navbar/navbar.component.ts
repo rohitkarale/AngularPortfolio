@@ -13,6 +13,12 @@ export class NavbarComponent {
 
   }
 
+  menuActive: boolean = false;
+
+  toggleMenu(): void {
+    this.menuActive = !this.menuActive;
+  }
+
   onHome() {
     this.router.navigate(['/portfolio-website/home']);
   }

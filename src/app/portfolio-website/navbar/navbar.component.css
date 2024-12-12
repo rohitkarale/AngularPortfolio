@@ -132,7 +132,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Hidden by default on mobile */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -140,10 +140,11 @@
         background-color: #1e1e40;
         width: 100%;
         padding: 10px 0;
+        transition: all 0.3s ease-in-out;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Display when active */
     }
 
     .nav-links a {
@@ -152,6 +153,6 @@
     }
 
     .bx-menu {
-        display: block;
+        display: block; /* Visible on mobile */
     }
 }
